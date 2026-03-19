@@ -42,11 +42,17 @@
         }
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         body { min-height: 100vh; }
+        
+        @keyframes pulse-subtle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        .loading-ai { animation: pulse-subtle 1.5s infinite; }
     </style>
 </head>
 <body class="bg-background text-on-surface selection:bg-primary/30">
 
-    <!-- Barra Superior -->
+    <!-- TopAppBar -->
     <header class="fixed top-0 w-full z-50 bg-background border-b border-outline-variant flex items-center justify-between px-4 h-16">
         <div class="flex items-center gap-4">
             <button class="text-primary hover:bg-surface-container-high transition-colors p-2 rounded-lg active:scale-95 duration-150">
@@ -63,87 +69,199 @@
     </header>
 
     <main class="pt-20 pb-24 px-4 max-w-5xl mx-auto">
-        <!-- El apartado de métricas (porcentajes, completados, área de foco) ha sido eliminado para mayor simplicidad -->
-
-        <!-- Lista de Historial -->
-        <div class="flex items-center justify-between mb-6">
-            <h2 class="text-lg font-bold tracking-tight">Historial de Tareas</h2>
-            <button class="text-primary text-sm font-medium flex items-center gap-1 hover:underline">
-                <span class="material-symbols-outlined text-sm">filter_list</span>
-                Filtrar
-            </button>
+        
+        <!-- Header de Memoria -->
+        <div class="flex flex-col mb-8">
+            <h2 class="text-2xl font-bold tracking-tight mb-1">Historial</h2>
+            <p class="text-on-surface-variant text-sm">Tareas completadas.</p>
         </div>
 
-        <div class="space-y-4">
-            <!-- Tarea 1 -->
-            <div class="bg-surface-container border border-outline-variant rounded-xl p-4 md:p-6 hover:bg-surface-container-high transition-colors group">
-                <div class="flex flex-col md:flex-row md:items-start justify-between gap-4">
-                    <div class="flex-1">
-                        <div class="flex items-center gap-3 mb-1">
-                            <span class="bg-tertiary-container/30 text-tertiary text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-widest">Completado</span>
-                            <span class="text-on-surface-variant text-xs">24 Oct, 2023</span>
-                        </div>
-                        <h3 class="text-on-surface font-bold text-lg mb-1 group-hover:text-primary transition-colors">Campaña Anual de Solidaridad</h3>
-                        <p class="text-on-surface-variant text-sm leading-relaxed max-w-2xl">Organización exitosa de la colecta local con más de 50 voluntarios y 200 familias asistidas en el territorio.</p>
-                    </div>
-                    <div class="flex -space-x-2 overflow-hidden items-center">
-                        <img class="inline-block h-8 w-8 rounded-full ring-2 ring-surface-container" alt="Marcus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3pNUuxiRcle9rHtfmtU2l4SyBzmjV5jgN6-gVl8peaNtSB5rvCRUgG-Msh__umFQatZgw65BT1_R7P8OAWRC4zkJV_XyYQoWtSv0-ZxVpSH_7sgHZcDXd1MECvcBM-Z77pOqhjW0MP3JmenWgcySKoDo6hHWXnVA5Ky0WLhN2K6uoURMUTdUfcCP8QjYLCTPi3UEZyYjwDb955H9-ZUdADRn8n4_9ObZMZeKstnfPfsX5JlyuEdwusjQ7d948nTl8MyH35ioHlbkK"/>
-                        <img class="inline-block h-8 w-8 rounded-full ring-2 ring-surface-container" alt="Sarah" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7AD5LIiKljaSd0CxtGiZE_hC4FuitwJLvS8NH8aNDiZ4gHXYxIx1MnwMZrlbU4OFEVwccEiVBxRHxnPelPlX84ODHjVqLerZ5nQDAL_Kpx5A2enJCprRuuzEhLtAIdeY8sc0HaujAmWV1FUpFaEf-69bAx-8Ux0Ansed8t-sojYrSJHfEJwK76vLDNi6wr4jUxlu3SVNzgSNNjBD48jy6KfyWHmez8WJWYKSO_BHGd3BNOtUB8bbprLR54bPCRTQEcLfaAb-G05ag"/>
-                        <div class="flex items-center justify-center h-8 w-8 rounded-full ring-2 ring-surface-container bg-surface-container-highest text-[10px] font-bold">+2</div>
-                    </div>
-                </div>
-                <div class="mt-4 pt-4 border-t border-outline-variant flex items-center justify-between text-xs text-on-surface-variant">
-                    <div class="flex items-center gap-4">
-                        <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">attachment</span> 14 archivos</span>
-                        <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">chat</span> 42 comentarios</span>
-                    </div>
-                    <button class="opacity-0 group-hover:opacity-100 transition-opacity text-primary font-bold">VER CASO DE ESTUDIO</button>
-                </div>
-            </div>
-
-            <!-- Tarea 2 -->
-            <div class="bg-surface-container border border-outline-variant rounded-xl p-4 md:p-6 hover:bg-surface-container-high transition-colors group">
-                <div class="flex flex-col md:flex-row md:items-start justify-between gap-4">
-                    <div class="flex-1">
-                        <div class="flex items-center gap-3 mb-1">
-                            <span class="bg-tertiary-container/30 text-tertiary text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-widest">Completado</span>
-                            <span class="text-on-surface-variant text-xs">15 Oct, 2023</span>
-                        </div>
-                        <h3 class="text-on-surface font-bold text-lg mb-1 group-hover:text-primary transition-colors">Retiro Espiritual de 5to Año</h3>
-                        <p class="text-on-surface-variant text-sm leading-relaxed max-w-2xl">Acompañamiento y diseño de la jornada de interioridad. Foco en el proyecto de vida y vínculos grupales.</p>
-                    </div>
-                </div>
-                <div class="mt-4 pt-4 border-t border-outline-variant flex items-center justify-between text-xs text-on-surface-variant">
-                    <div class="flex items-center gap-4">
-                        <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">attachment</span> 5 archivos</span>
-                    </div>
-                    <button class="opacity-0 group-hover:opacity-100 transition-opacity text-primary font-bold">VER CASO DE ESTUDIO</button>
-                </div>
+        <!-- History List (Dinámica) -->
+        <div id="history-list" class="space-y-4">
+            <!-- Las tareas completadas en tasks.html aparecerán acá -->
+            <div id="empty-state" class="hidden py-20 flex flex-col items-center text-center gap-4 opacity-50">
+                <span class="material-symbols-outlined text-6xl">history_edu</span>
+                <p class="font-medium">Todavía no hay tareas completadas.<br>El oro de la experiencia se cocina en la acción.</p>
             </div>
         </div>
 
         <div class="mt-8 flex justify-center">
-            <button class="bg-surface-container-high text-on-surface px-6 py-2 rounded-lg font-medium text-sm hover:bg-surface-variant transition-colors border border-outline-variant active:scale-95 duration-150">
-                Cargar Registros Anteriores
+            <button onclick="clearHistory()" class="text-on-surface-variant text-xs hover:text-error transition-colors flex items-center gap-1">
+                <span class="material-symbols-outlined text-sm">delete_sweep</span>
+                Limpiar Memoria de Tareas
             </button>
         </div>
     </main>
 
-    <!-- Navegación Inferior: Sin opción de "Equipo" -->
+    <!-- Modal para Gemini ✨ -->
+    <div id="ai-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeAIModal()"></div>
+        <div class="bg-surface-container border border-outline-variant w-full max-w-2xl rounded-2xl shadow-2xl relative flex flex-col max-h-[80vh]">
+            <div class="p-6 border-b border-outline-variant flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary">auto_awesome</span>
+                    <h2 id="modal-title" class="text-xl font-bold tracking-tight">Análisis de Gemini</h2>
+                </div>
+                <button onclick="closeAIModal()" class="text-on-surface-variant hover:text-on-surface transition-colors">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <div id="modal-content" class="p-6 overflow-y-auto text-on-surface-variant leading-relaxed font-geist whitespace-pre-wrap">
+            </div>
+            <div class="p-4 border-t border-outline-variant bg-surface-container-high flex justify-end gap-3">
+                <button onclick="copyToClipboard()" class="px-4 py-2 text-sm font-bold text-primary hover:bg-primary/10 rounded-lg transition-all flex items-center gap-2">
+                    <span class="material-symbols-outlined text-sm">content_copy</span>
+                    Copiar
+                </button>
+                <button onclick="closeAIModal()" class="px-6 py-2 bg-outline-variant text-on-surface rounded-lg font-bold hover:brightness-110 transition-all">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- BottomNavBar -->
     <nav class="fixed bottom-0 w-full z-50 bg-surface border-t border-outline-variant flex justify-around items-center h-16 pb-safe">
-        <a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors active:scale-90 duration-200" href="index.html">
+        <a class="flex flex-col items-center justify-center text-on-surface-variant" href="index.html">
             <span class="material-symbols-outlined">dashboard</span>
             <span class="font-geist text-[10px] font-medium">Dashboard</span>
         </a>
-        <a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors active:scale-90 duration-200" href="tasks.html">
+        <a class="flex flex-col items-center justify-center text-on-surface-variant" href="tasks.html">
             <span class="material-symbols-outlined">assignment</span>
             <span class="font-geist text-[10px] font-medium">Tareas</span>
         </a>
-        <a class="flex flex-col items-center justify-center text-primary font-bold active:scale-90 duration-200" href="history.html">
+        <a class="flex flex-col items-center justify-center text-primary font-bold" href="history.html">
             <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">history</span>
             <span class="font-geist text-[10px]">Historial</span>
         </a>
     </nav>
 
+    <script>
+        const apiKey = "";
+        
+        function loadHistory() {
+            const historyList = document.getElementById('history-list');
+            const emptyState = document.getElementById('empty-state');
+            
+            // Leemos la misma cajita que usa tasks.html
+            const tasks = JSON.parse(localStorage.getItem('pastoral-tasks')) || [];
+            
+            // Filtramos solo las que están marcadas como completadas
+            const completedTasks = tasks.filter(t => t.completed);
+            
+            if (completedTasks.length === 0) {
+                emptyState.classList.remove('hidden');
+                // Limpiamos los anteriores si los hubiera
+                const cards = historyList.querySelectorAll('.task-card');
+                cards.forEach(c => c.remove());
+                return;
+            }
+            
+            emptyState.classList.add('hidden');
+            
+            // Limpiar lista actual para no duplicar
+            const currentCards = historyList.querySelectorAll('.task-card');
+            currentCards.forEach(c => c.remove());
+
+            completedTasks.forEach(task => {
+                const card = document.createElement('div');
+                card.className = "task-card bg-surface-container border border-outline-variant rounded-xl p-5 hover:bg-surface-container-high transition-colors group";
+                
+                card.innerHTML = `
+                    <div class="flex flex-col md:flex-row md:items-start justify-between gap-4">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-3 mb-1">
+                                <span class="bg-tertiary-container/30 text-tertiary text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-widest">Logrado</span>
+                                <span class="text-on-surface-variant text-xs">${task.priority || 'General'}</span>
+                            </div>
+                            <h3 class="task-title text-on-surface font-bold text-lg mb-1 group-hover:text-primary transition-colors">${task.title}</h3>
+                            <p class="task-desc text-on-surface-variant text-sm leading-relaxed">Esta acción fue completada y está lista para ser analizada como parte de la Biblioteca Viva.</p>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-outline-variant flex items-center justify-between">
+                        <span class="text-[10px] text-on-surface-variant uppercase font-bold tracking-tighter">Memoria Institucional</span>
+                        <button onclick="generateCaseStudy(this)" class="px-3 py-1 bg-primary text-on-primary rounded-lg font-bold flex items-center gap-1 hover:brightness-110 active:scale-95 transition-all text-xs">
+                            <span class="material-symbols-outlined text-sm">psychology</span>
+                            Redactar Caso con IA ✨
+                        </button>
+                    </div>
+                `;
+                historyList.appendChild(card);
+            });
+        }
+
+        async function callGemini(prompt, systemPrompt = "") {
+            const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+            const payload = {
+                contents: [{ parts: [{ text: prompt }] }],
+                systemInstruction: { parts: [{ text: systemPrompt }] }
+            };
+
+            for (let i = 0; i < 5; i++) {
+                try {
+                    const response = await fetch(url, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                    if (!response.ok) throw new Error('API Error');
+                    const result = await response.json();
+                    return result.candidates?.[0]?.content?.parts?.[0]?.text;
+                } catch (error) {
+                    await new Promise(resolve => setTimeout(resolve, Math.pow(2, i) * 1000));
+                }
+            }
+            throw new Error('No se pudo conectar con Gemini.');
+        }
+
+        async function generateCaseStudy(btn) {
+            const card = btn.closest('.task-card');
+            const taskTitle = card.querySelector('.task-title').innerText;
+
+            const modal = document.getElementById('ai-modal');
+            const title = document.getElementById('modal-title');
+            const content = document.getElementById('modal-content');
+            
+            title.innerText = `Sistematizando: ${taskTitle} ✨`;
+            content.innerHTML = '<div class="flex flex-col items-center py-10 gap-4"><span class="material-symbols-outlined text-5xl text-primary animate-spin">auto_awesome</span><p class="loading-ai">Extrayendo el oro de la experiencia...</p></div>';
+            modal.classList.remove('hidden');
+
+            const systemPrompt = "Sos un mentor experto en sistematizar experiencias pastorales y educativas. Tu objetivo es transformar una tarea cumplida en un breve relato con Criterio y Sentido.";
+            const userPrompt = `Tarea: ${taskTitle}. Redactá un caso de estudio breve para la 'Biblioteca Viva'. Estructura: 1. El Emergente (por qué era necesario). 2. El Vínculo (cómo participó el equipo/comunidad). 3. El Refrán (una idea corta y potente que resuma el aprendizaje).`;
+
+            try {
+                const text = await callGemini(userPrompt, systemPrompt);
+                content.innerText = text;
+            } catch (err) {
+                content.innerHTML = `<p class="text-error font-bold">Error: ${err.message}</p>`;
+            }
+        }
+
+        function clearHistory() {
+            // Esto solo limpia la memoria si querés empezar de cero
+            localStorage.removeItem('pastoral-tasks');
+            loadHistory();
+        }
+
+        function closeAIModal() {
+            document.getElementById('ai-modal').classList.add('hidden');
+        }
+
+        function copyToClipboard() {
+            const content = document.getElementById('modal-content').innerText;
+            const el = document.createElement('textarea');
+            el.value = content;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            const btn = document.querySelector('button[onclick="copyToClipboard()"]');
+            btn.innerHTML = '<span class="material-symbols-outlined text-sm">check</span> Copiado';
+            setTimeout(() => btn.innerHTML = '<span class="material-symbols-outlined text-sm">content_copy</span> Copiar', 2000);
+        }
+
+        // Cargar al iniciar
+        loadHistory();
+    </script>
 </body>
 </html>
