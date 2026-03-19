@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Pastoral Projects - Historial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#a78bfa",
+                        "on-primary": "#0a0012",
+                        "surface": "#0c0c0f",
+                        "on-surface": "#fafafa",
+                        "background": "#09090b",
+                        "on-background": "#fafafa",
+                        "surface-container": "#121215",
+                        "surface-container-high": "#18181b",
+                        "surface-container-low": "#0f0f12",
+                        "outline-variant": "#27272a",
+                        "on-surface-variant": "#a1a1aa",
+                        "tertiary": "#34d399",
+                        "tertiary-container": "#065f46",
+                        "primary-container": "#7c3aed"
+                    },
+                    fontFamily: {
+                        "geist": ["Geist", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Geist', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        body { min-height: 100vh; }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary/30">
+
+    <!-- TopAppBar -->
+    <header class="fixed top-0 w-full z-50 bg-background border-b border-outline-variant flex items-center justify-between px-4 h-16">
+        <div class="flex items-center gap-4">
+            <button class="text-primary hover:bg-surface-container-high transition-colors p-2 rounded-lg active:scale-95 duration-150">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <h1 class="text-xl font-bold text-on-surface font-geist tracking-tight">Pastoral Projects</h1>
+        </div>
+        <div class="flex items-center gap-3">
+            <span class="text-on-surface-variant text-sm font-medium hidden md:block">Historial</span>
+            <div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant">
+                <img alt="Perfil" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnbiSDitG6z4xpBfeCxXGfpQBM9rSB2elKYDqI0diKnOfNdxDkNJl9En1ndrT4ChuWza5jklqq2LdgzkJByP7tPBGmih3Y1v7X824l1dGQSDYc7oA4JQd-XPfdamymWz3jh381Y-CLUKDai5tel26x6KsPT7DyiVwIRNwOLZKrmTr001G0SumhpaCufOEZ0bx47_521L0H3YCjWmVN7NECZihxo8tQyy7qifhF3efxBZXWA96pYgIvZ6kUT8xrPR8Q-JRz5USott2a"/>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20 pb-24 px-4 max-w-5xl mx-auto">
+        <!-- Stats / Achievement Header -->
+        <section class="mb-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-surface-container border border-outline-variant rounded-xl p-5">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-on-surface-variant text-xs uppercase tracking-wider font-bold">Total Completado</span>
+                    <span class="material-symbols-outlined text-tertiary">check_circle</span>
+                </div>
+                <div class="text-3xl font-bold text-on-surface">124</div>
+                <div class="text-tertiary text-xs mt-1">+12 este mes</div>
+            </div>
+            <div class="bg-surface-container border border-outline-variant rounded-xl p-5">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-on-surface-variant text-xs uppercase tracking-wider font-bold">Velocidad de Equipo</span>
+                    <span class="material-symbols-outlined text-primary">speed</span>
+                </div>
+                <div class="text-3xl font-bold text-on-surface">94%</div>
+                <div class="text-on-surface-variant text-xs mt-1">Eficiencia promedio</div>
+            </div>
+            <div class="bg-surface-container border border-outline-variant rounded-xl p-5">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-on-surface-variant text-xs uppercase tracking-wider font-bold">Área de Foco</span>
+                    <span class="material-symbols-outlined text-amber-400">star</span>
+                </div>
+                <div class="text-3xl font-bold text-on-surface">Outreach</div>
+                <div class="text-on-surface-variant text-xs mt-1">Categoría más activa</div>
+            </div>
+        </section>
+
+        <!-- History List -->
+        <div class="flex items-center justify-between mb-6">
+            <h2 class="text-lg font-bold tracking-tight">Historial de Tareas</h2>
+            <button class="text-primary text-sm font-medium flex items-center gap-1 hover:underline">
+                <span class="material-symbols-outlined text-sm">filter_list</span>
+                Filtrar
+            </button>
+        </div>
+
+        <div class="space-y-4">
+            <!-- Tarea 1 -->
+            <div class="bg-surface-container border border-outline-variant rounded-xl p-4 md:p-6 hover:bg-surface-container-high transition-colors group">
+                <div class="flex flex-col md:flex-row md:items-start justify-between gap-4">
+                    <div class="flex-1">
+                        <div class="flex items-center gap-3 mb-1">
+                            <span class="bg-tertiary-container/30 text-tertiary text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-widest">Completado</span>
+                            <span class="text-on-surface-variant text-xs">24 Oct, 2023</span>
+                        </div>
+                        <h3 class="text-on-surface font-bold text-lg mb-1 group-hover:text-primary transition-colors">Campaña Anual de Solidaridad</h3>
+                        <p class="text-on-surface-variant text-sm leading-relaxed max-w-2xl">Organización exitosa de la colecta local con más de 50 voluntarios y 200 familias asistidas en el territorio.</p>
+                    </div>
+                    <div class="flex -space-x-2 overflow-hidden items-center">
+                        <img class="inline-block h-8 w-8 rounded-full ring-2 ring-surface-container" alt="Marcus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3pNUuxiRcle9rHtfmtU2l4SyBzmjV5jgN6-gVl8peaNtSB5rvCRUgG-Msh__umFQatZgw65BT1_R7P8OAWRC4zkJV_XyYQoWtSv0-ZxVpSH_7sgHZcDXd1MECvcBM-Z77pOqhjW0MP3JmenWgcySKoDo6hHWXnVA5Ky0WLhN2K6uoURMUTdUfcCP8QjYLCTPi3UEZyYjwDb955H9-ZUdADRn8n4_9ObZMZeKstnfPfsX5JlyuEdwusjQ7d948nTl8MyH35ioHlbkK"/>
+                        <img class="inline-block h-8 w-8 rounded-full ring-2 ring-surface-container" alt="Sarah" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7AD5LIiKljaSd0CxtGiZE_hC4FuitwJLvS8NH8aNDiZ4gHXYxIx1MnwMZrlbU4OFEVwccEiVBxRHxnPelPlX84ODHjVqLerZ5nQDAL_Kpx5A2enJCprRuuzEhLtAIdeY8sc0HaujAmWV1FUpFaEf-69bAx-8Ux0Ansed8t-sojYrSJHfEJwK76vLDNi6wr4jUxlu3SVNzgSNNjBD48jy6KfyWHmez8WJWYKSO_BHGd3BNOtUB8bbprLR54bPCRTQEcLfaAb-G05ag"/>
+                        <div class="flex items-center justify-center h-8 w-8 rounded-full ring-2 ring-surface-container bg-surface-container-highest text-[10px] font-bold">+2</div>
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-outline-variant flex items-center justify-between text-xs text-on-surface-variant">
+                    <div class="flex items-center gap-4">
+                        <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">attachment</span> 14 archivos</span>
+                        <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">chat</span> 42 comentarios</span>
+                    </div>
+                    <button class="opacity-0 group-hover:opacity-100 transition-opacity text-primary font-bold">VER CASO DE ESTUDIO</button>
+                </div>
+            </div>
+            <!-- Más entradas omitidas por brevedad en este bloque -->
+        </div>
+
+        <div class="mt-8 flex justify-center">
+            <button class="bg-surface-container-high text-on-surface px-6 py-2 rounded-lg font-medium text-sm hover:bg-surface-variant transition-colors border border-outline-variant active:scale-95 duration-150">
+                Cargar Registros Anteriores
+            </button>
+        </div>
+    </main>
+
+    <!-- BottomNavBar: Navegación Relativa para GitHub Pages -->
+    <nav class="fixed bottom-0 w-full z-50 bg-surface border-t border-outline-variant flex justify-around items-center h-16 pb-safe">
+        <a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors active:scale-90 duration-200" href="index.html">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span class="font-geist text-[10px] font-medium">Dashboard</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors active:scale-90 duration-200" href="tasks.html">
+            <span class="material-symbols-outlined">assignment</span>
+            <span class="font-geist text-[10px] font-medium">Tareas</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-primary font-bold active:scale-90 duration-200" href="history.html">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">history</span>
+            <span class="font-geist text-[10px]">Historial</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors active:scale-90 duration-200" href="#">
+            <span class="material-symbols-outlined">group</span>
+            <span class="font-geist text-[10px] font-medium">Equipo</span>
+        </a>
+    </nav>
+
+</body>
+</html>

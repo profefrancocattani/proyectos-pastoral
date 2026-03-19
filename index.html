@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Pastoral Projects - Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#a78bfa",
+                        "on-primary": "#0a0012",
+                        "surface": "#0c0c0f",
+                        "on-surface": "#fafafa",
+                        "background": "#09090b",
+                        "on-background": "#fafafa",
+                        "surface-container": "#121215",
+                        "surface-container-high": "#18181b",
+                        "surface-container-highest": "#1e1e22",
+                        "outline-variant": "#27272a",
+                        "on-surface-variant": "#a1a1aa",
+                        "tertiary": "#34d399",
+                        "error": "#ef4444",
+                        "primary-container": "#7c3aed"
+                    },
+                    fontFamily: {
+                        "geist": ["Geist", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Geist', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Ajuste para evitar scroll horizontal y asegurar altura mínima */
+        body {
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary/30">
+
+    <!-- Header / TopAppBar -->
+    <header class="fixed top-0 w-full z-50 bg-background border-b border-outline-variant flex items-center justify-between px-4 h-16">
+        <div class="flex items-center gap-4">
+            <button class="text-primary hover:bg-surface-container-high transition-colors p-2 rounded-lg active:scale-95 duration-150">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <h1 class="font-geist tracking-tight text-on-surface text-xl font-bold">Pastoral Projects</h1>
+        </div>
+        <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant">
+                <img class="w-full h-full object-cover" alt="Avatar del Lead" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE31RQfpeDYfhaDB7lmwqir9MxZaJEwi9pqzTchFrGG8rI_2Zq2BJAPh1TGn0djFhVULVlIloS2120-Q9ROG67t8F9Kv9PNEbdh6gE2izVe32dTNWPok7KkIoTkUG-LfqqmAC9XPLtFHwSG3GLJ_8duqYuy2s85WO0xoKiu6elKK7enCQRWgTbW38T_A2mDnPtsutnQ2eL3TAQt85AdtxY5tisDO4tSHU6RUMrd4F9NW6VHQnVFpjB57zpSMU3T99Toj2BCm8YEs1N"/>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20 pb-24 px-4 max-w-5xl mx-auto space-y-8">
+        
+        <!-- Saludo y Equipo -->
+        <section class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div>
+                <h2 class="text-3xl font-extrabold tracking-tight text-on-surface mb-1">Bienvenido, Lead</h2>
+                <p class="text-on-surface-variant">Esto es lo que está pasando en tus proyectos hoy.</p>
+            </div>
+            <div class="flex -space-x-3 overflow-hidden">
+                <div class="relative group">
+                    <img class="inline-block h-10 w-10 rounded-full ring-2 ring-background" alt="Anna Miller" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLJv2vIg6BXJGGVLUhniiR5LX9iVK00CR6y2jyjRDtFUgSAyqo_1_Yu4O8MvcMvOdXp4eBTJLcimaz9Qp_sdEOrkgASA9JuFTxd6OCyUldl2qaYYWHqrfroCJUvvww1cxZqLA-TYZ6q6qTlibxEqqQWTU9Pxc8KA2ly7lplqAGcmML49AO2DOEc4bV9TuzcfaVMXUWCUgKUgoBKqaV2z59c-RXbK0Ha_Vu5QMnQie5fED4M2u3NnAu_XZVTdnlceBUiU42YA4NZiUI"/>
+                    <span class="absolute bottom-0 right-0 block h-2.5 w-2.5 rounded-full bg-tertiary ring-2 ring-background"></span>
+                </div>
+                <div class="relative group">
+                    <img class="inline-block h-10 w-10 rounded-full ring-2 ring-background" alt="John Doe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCis_dQ3IkPx0iiDCu-OZSVfCnfdgvmC745c_aXjSbOQA03ZsF5XavUVCdVayCGM5UfDYt73vmzU--Z6-XXW8duMPCHEPLrUNf1h6BLhsNXMfKfsTZIqhMrOcHpBQ1ijMJ3DQ0YJosw41gv3x2JlMBVf2WemGpvaSjCfRAt2bDuHG_luTXX1XTuMLxob3Wcd2lZH6CXO8rac50fN0JciSkD_dgC5RJfB8tS73z59cmcu8xktYVth_0u3p4EDi8P2Xc93_G3IAbEcVSw"/>
+                    <span class="absolute bottom-0 right-0 block h-2.5 w-2.5 rounded-full bg-tertiary ring-2 ring-background"></span>
+                </div>
+                <div class="relative group">
+                    <img class="inline-block h-10 w-10 rounded-full ring-2 ring-background" alt="Sarah Kim" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxQAgmgj8sRXo-lavBtACIOPrBSfmlYSU4JU96xWxEv-8iWMt7I1p1EuNnUgp_oo5STkN7f5tJL8mF0i00Hf3TrUe9ltkgTSpTfrAM8Qi7YESEyqyw0pbVG6M1CI2xXflUJm6gsNKek9UbQhV8bT8X_nuiv7ZUI5SDfey0r1J1Qi8hQZKsOYCVyc7C8_iDZDCGRavsFgYU_y93FXcBsXekN4intikHsS8AgzdecSBGXnGUs7X2iZ4GeTJWU6Zml-Xwqp8YdACEMopS"/>
+                    <span class="absolute bottom-0 right-0 block h-2.5 w-2.5 rounded-full bg-yellow-500 ring-2 ring-background"></span>
+                </div>
+                <div class="flex items-center justify-center h-10 w-10 rounded-full ring-2 ring-background bg-surface-container-high text-xs font-medium text-on-surface-variant">
+                    +12
+                </div>
+            </div>
+        </section>
+
+        <!-- Metrics Bento Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!-- Tickets Activos -->
+            <div class="bg-surface-container border border-outline-variant p-6 rounded-xl flex flex-col justify-between aspect-square md:aspect-auto">
+                <div>
+                    <span class="text-on-surface-variant text-sm font-medium uppercase tracking-wider">Tickets Activos</span>
+                    <div class="text-5xl font-extrabold mt-2 text-primary">24</div>
+                </div>
+                <div class="mt-4 flex items-center gap-2 text-tertiary text-sm">
+                    <span class="material-symbols-outlined text-sm">trending_up</span>
+                    <span>12% más que la semana pasada</span>
+                </div>
+            </div>
+
+            <!-- Progreso Circular -->
+            <div class="bg-surface-container border border-outline-variant p-6 rounded-xl flex flex-col items-center justify-center relative overflow-hidden group">
+                <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="relative w-32 h-32 flex items-center justify-center">
+                    <svg class="w-full h-full transform -rotate-90">
+                        <circle class="text-surface-container-highest" cx="64" cy="64" fill="transparent" r="58" stroke="currentColor" stroke-width="8"></circle>
+                        <circle class="text-tertiary" cx="64" cy="64" fill="transparent" r="58" stroke="currentColor" stroke-dasharray="364.4" stroke-dashoffset="109.3" stroke-width="8"></circle>
+                    </svg>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center">
+                        <span class="text-2xl font-bold">70%</span>
+                        <span class="text-[10px] text-on-surface-variant uppercase">Meta</span>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-on-surface font-semibold">Completado esta semana</h3>
+            </div>
+
+            <!-- Capacidad del Equipo -->
+            <div class="bg-surface-container border border-outline-variant p-6 rounded-xl flex flex-col justify-between">
+                <div class="flex justify-between items-start">
+                    <span class="text-on-surface-variant text-sm font-medium uppercase tracking-wider">Capacidad</span>
+                    <span class="material-symbols-outlined text-on-surface-variant">bolt</span>
+                </div>
+                <div>
+                    <div class="text-4xl font-extrabold mt-4">88<span class="text-lg text-on-surface-variant font-normal">/100</span></div>
+                    <div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-4 overflow-hidden">
+                        <div class="bg-primary h-full w-[88%]"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Proyectos e Iniciativas -->
+        <section>
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-xl font-bold tracking-tight">Iniciativas Clave</h2>
+                <button class="text-primary text-sm font-medium hover:underline">Ver todas</button>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Tarjeta de Proyecto 1 -->
+                <div class="bg-surface-container border border-outline-variant p-5 rounded-xl hover:bg-surface-container-high transition-colors group">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-2 bg-primary/10 rounded-lg text-primary">
+                            <span class="material-symbols-outlined">volunteer_activism</span>
+                        </div>
+                        <span class="text-[10px] font-bold px-2 py-1 rounded bg-tertiary/20 text-tertiary uppercase">Prioridad Alta</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-1 text-on-surface">Expansión Mentoreo Juvenil</h3>
+                    <p class="text-on-surface-variant text-sm line-clamp-2 mb-6">Implementando el nuevo marco de consejería 1-on-1 en todas las sedes regionales.</p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex -space-x-2">
+                            <img class="h-6 w-6 rounded-full border border-surface" alt="Colaborador A" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuf1eQlyz02Rts9yYzuAS6J-JcaxhLPYr8arUTNFSD_3Z-4Mb6xKhDZXier9KXe5Dri70HFkQGHe8-bqbX_5E8815YLZV3QW6mDk48dkxAfjdDKvXJGC8KmWg9rhbU6evVsn_ynOq4HurpBEAWEOCXQ3xvynsQe44sDjINUvMaCT1IL5II7TQ3IqR3c831xMEUmrzsyKAzwmnADcdQ_aqCgaYmj4zZPbh8H1CR0amykQcYWq6dnzeEZBVWLEp4kDAOs87ybI42dkki"/>
+                            <img class="h-6 w-6 rounded-full border border-surface" alt="Colaborador B" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDibzOz4F7C8f6CChlVXdjHbCovkE2HNXVH5qoGdX0fH6_LWWBuOxkAndGy369wpyvJfH9_oW0c3f3xAXD_UHw9KAmUkAgFFjfml_oFDcigfCxodbvj-6PMwhoZysB9QIkcPSljrVF-BWSpTkQs9XOq9ixlIBF2k6TRhhHBRWUfL3qlCc9ZQLivuilK2WYQW-ivT8jWBpMRvAJBpa5RKrRT4tE5Npb0MLtOPwMk0rP5zD7Jy44adsane-o51zaQnhovuscHv6as0dqG"/>
+                        </div>
+                        <div class="text-xs text-on-surface-variant font-medium">42% de Progreso</div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de Proyecto 2 -->
+                <div class="bg-surface-container border border-outline-variant p-5 rounded-xl hover:bg-surface-container-high transition-colors group">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-2 bg-surface-container-highest rounded-lg text-on-surface">
+                            <span class="material-symbols-outlined">stadium</span>
+                        </div>
+                        <span class="text-[10px] font-bold px-2 py-1 rounded bg-surface-container-highest text-on-surface-variant uppercase">Planeamiento</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-1 text-on-surface">Gala Comunitaria Anual</h3>
+                    <p class="text-on-surface-variant text-sm line-clamp-2 mb-6">Logística y coordinación de proveedores para el próximo evento de recaudación de fondos de noviembre.</p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex -space-x-2">
+                            <img class="h-6 w-6 rounded-full border border-surface" alt="Colaborador C" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa1k0CWprDUS9kD3Cb2SokInTELox_heYFAdzL_T2RQ6s3OoYL3LZIxW2W0gBwECa2OEXmIcg_2b447xbDoG5JjEI2vJIyVJUhJOHYvT-TY0br4QEA50v-GrFExW4ZMfijqtXYz0a19GuPgxz5Piekc5PrVzAWDR-qiob8cyeAPmGSyqs1laSIE6UK5iqgLb8tp-sW1ZDNGQ9KHKuBOGmaoPaqSySxBe_b3bcmmCO5mnwoT4FxvPKcAzhm3_wMVSnvbCe2rp6xT9Tg"/>
+                        </div>
+                        <div class="text-xs text-on-surface-variant font-medium">12% de Progreso</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feed de Actividad Reciente -->
+        <section class="bg-surface-container border border-outline-variant rounded-xl overflow-hidden">
+            <div class="p-4 border-b border-outline-variant bg-surface-container-high flex items-center justify-between">
+                <h3 class="font-bold">Actividad Reciente</h3>
+                <span class="material-symbols-outlined text-on-surface-variant text-lg">history</span>
+            </div>
+            <div class="divide-y divide-outline-variant">
+                <div class="p-4 flex gap-4 hover:bg-surface-container transition-colors">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-tertiary/20 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                    </div>
+                    <div>
+                        <p class="text-sm text-on-surface"><span class="font-bold">Anna Miller</span> completó <span class="text-primary font-medium">Reporte de Outreach Trimestral</span></p>
+                        <span class="text-xs text-on-surface-variant">Hace 2 horas</span>
+                    </div>
+                </div>
+                <div class="p-4 flex gap-4 hover:bg-surface-container transition-colors">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center">
+                        <span class="material-symbols-outlined text-on-surface-variant text-sm">chat_bubble</span>
+                    </div>
+                    <div>
+                        <p class="text-sm text-on-surface"><span class="font-bold">John Doe</span> comentó en <span class="text-primary font-medium">Logística del Evento</span></p>
+                        <span class="text-xs text-on-surface-variant">Hace 5 horas</span>
+                    </div>
+                </div>
+                <div class="p-4 flex gap-4 hover:bg-surface-container transition-colors">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-error/20 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-error text-sm">priority_high</span>
+                    </div>
+                    <div>
+                        <p class="text-sm text-on-surface"><span class="font-bold text-error">Alerta de Sistema</span>: Se acerca la fecha límite para <span class="text-error font-medium">Aprobación de Presupuesto</span></p>
+                        <span class="text-xs text-on-surface-variant">Ayer</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Barra de Navegación Inferior -->
+    <nav class="fixed bottom-0 w-full z-50 bg-surface border-t border-outline-variant flex justify-around items-center h-16 pb-safe">
+        <a class="flex flex-col items-center justify-center text-primary font-bold hover:text-on-surface transition-colors active:scale-90 duration-200" href="#">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+            <span class="font-geist text-[10px] font-medium">Dashboard</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors active:scale-90 duration-200" href="#">
+            <span class="material-symbols-outlined">assignment</span>
+            <span class="font-geist text-[10px] font-medium">Tareas</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors active:scale-90 duration-200" href="#">
+            <span class="material-symbols-outlined">history</span>
+            <span class="font-geist text-[10px] font-medium">Historial</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors active:scale-90 duration-200" href="#">
+            <span class="material-symbols-outlined">group</span>
+            <span class="font-geist text-[10px] font-medium">Equipo</span>
+        </a>
+    </nav>
+
+    <!-- Botón de Acción Flotante (FAB) -->
+    <button class="fixed right-6 bottom-24 w-14 h-14 bg-primary text-on-primary rounded-xl shadow-2xl flex items-center justify-center hover:brightness-110 active:scale-95 transition-all z-40">
+        <span class="material-symbols-outlined text-2xl">add</span>
+    </button>
+
+</body>
+</html>

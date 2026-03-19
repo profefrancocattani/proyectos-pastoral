@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Pastoral Projects - Tareas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#a78bfa",
+                        "on-primary": "#0a0012",
+                        "surface": "#0c0c0f",
+                        "on-surface": "#fafafa",
+                        "background": "#09090b",
+                        "on-background": "#fafafa",
+                        "surface-container": "#121215",
+                        "surface-container-high": "#18181b",
+                        "surface-container-highest": "#1e1e22",
+                        "outline-variant": "#27272a",
+                        "on-surface-variant": "#a1a1aa",
+                        "tertiary": "#34d399",
+                        "error": "#ef4444",
+                        "primary-container": "#7c3aed"
+                    },
+                    fontFamily: {
+                        "geist": ["Geist", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Geist', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col selection:bg-primary/30">
+
+    <!-- Header / TopAppBar -->
+    <header class="bg-background fixed top-0 w-full z-50 border-b border-outline-variant flex items-center justify-between px-4 h-16">
+        <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary cursor-pointer active:scale-95 duration-150">menu</span>
+            <h1 class="font-geist tracking-tight text-on-surface text-xl font-bold">Pastoral Projects</h1>
+        </div>
+        <div class="flex items-center gap-4">
+            <div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden border border-outline-variant">
+                <img class="w-full h-full object-cover" alt="Avatar Lead" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACsNxNUoEQpbTHoWvFtp2fd_p5M5a4rHC2Cx-EYUk_lR5sI-9MfFi9MqiiZUL2nQNAq4bBxHiVV3D1UUKGB38jhZKeVaXMP4-KxD0RuAE25pwPZeWy4AqGagFwf5zrI-FF9v_Rxt_lW7cYlJPieK2erWZh1zatNXi8-9UUCl3Rkbpu0DE1RunQziuFTPrC4DagNfAmv4Y5tOswDpWLbVEN6f07kGcKN-WH7NqC--Zz6oojYe1xtuIIepmOxYicqSiNHEyulhladtFl"/>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="flex-grow pt-20 pb-24 px-4 max-w-2xl mx-auto w-full">
+        
+        <!-- Sección de Encabezado con Progreso -->
+        <section class="mb-8">
+            <div class="flex justify-between items-end mb-4">
+                <div>
+                    <h2 class="text-2xl font-bold tracking-tight text-on-surface">Tareas Activas</h2>
+                    <p class="text-on-surface-variant text-sm">8 tickets pendientes para esta semana</p>
+                </div>
+                <div class="text-right">
+                    <span class="text-tertiary font-bold text-lg">72%</span>
+                    <p class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Completado</p>
+                </div>
+            </div>
+            <div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+                <div class="h-full bg-tertiary w-[72%] rounded-full"></div>
+            </div>
+        </section>
+
+        <!-- Lista de Tareas -->
+        <div class="space-y-4">
+            
+            <!-- Tarea Prioridad Alta -->
+            <div class="bg-surface-container border border-outline-variant rounded-xl p-5 hover:bg-surface-container-high transition-colors group">
+                <div class="flex justify-between items-start mb-3">
+                    <span class="bg-primary-container/20 text-primary text-[10px] font-bold px-2 py-0.5 rounded border border-primary/30 uppercase tracking-wider">Prioridad Alta</span>
+                    <button class="text-on-surface-variant hover:text-tertiary transition-colors active:scale-90">
+                        <span class="material-symbols-outlined text-2xl">check_circle</span>
+                    </button>
+                </div>
+                <h3 class="text-lg font-bold text-on-surface mb-1 leading-tight">Coordinación de Misa Dominical</h3>
+                <p class="text-on-surface-variant text-sm mb-4 line-clamp-2">Finalizar el orden de servicio, coordinar con el equipo de música y asegurar que todos los recursos digitales estén en el servidor.</p>
+                <div class="flex justify-between items-center">
+                    <div class="flex -space-x-2">
+                        <img class="w-7 h-7 rounded-full border-2 border-surface shadow-sm" alt="Sarah" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVZSFbQ-ueCKnzCEC74RkUhu1-_NY5Zm88tv2F_gQE70dscRGD086X6Me25KuX8FJx30l-kIlW2_Gnl-OkPy2-euf3-PErZV09MlvuAAIiU7_1yifJTe15DVtfn-11uyyVFpxm4shyUI1HcLePTHRr0h0IqqMgtnoqSgzSg4_h9zQGavRj_oG5m8h8ooGbAe2e_XsQdjVGUt15H7ZELsHWw7kU__wS4Rn4BmXmQnGQF3mnmos4TNJcMdsZgwRUvJof86TYgrxhYsmi"/>
+                        <img class="w-7 h-7 rounded-full border-2 border-surface shadow-sm" alt="Mike" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0pRPRHTLO9haTOVyxHayZXk8R0Iw8NCTyW8m2c-pOIhvsYMt4PZIQM8q6RBwQcSOuHcVu4S2DnUFEfcnGLn5IZMHQ27OTgUsIM8-0Gtz0Wgoa7pU4aeJajUaifKwy8BfH0kNSIRJ3grdmdQ61LgIYc3YGK83Klt7GL-E3XPSLCq9NJUgDXt1h9wSm3KZdszT5elBVRjPCXvJAADS2dO9YX-UHsXJOrda9XT8VuzV_blRUh0x9-r1KyrptkLUXVPk6dATAQXcXarzJ"/>
+                        <div class="w-7 h-7 rounded-full border-2 border-surface bg-surface-container-highest flex items-center justify-center text-[10px] font-bold text-on-surface-variant">+2</div>
+                    </div>
+                    <span class="text-[11px] text-on-surface-variant font-medium">Vence Mañana</span>
+                </div>
+            </div>
+
+            <!-- Tarea Operacional -->
+            <div class="bg-surface-container border border-outline-variant rounded-xl p-5 hover:bg-surface-container-high transition-colors">
+                <div class="flex justify-between items-start mb-3">
+                    <span class="bg-surface-container-highest text-on-surface-variant text-[10px] font-bold px-2 py-0.5 rounded border border-outline-variant uppercase tracking-wider">Operativo</span>
+                    <button class="text-on-surface-variant hover:text-tertiary transition-colors active:scale-90">
+                        <span class="material-symbols-outlined text-2xl">check_circle</span>
+                    </button>
+                </div>
+                <h3 class="text-lg font-bold text-on-surface mb-1 leading-tight">Reporte Financiero Mensual</h3>
+                <p class="text-on-surface-variant text-sm mb-4">Conciliar donaciones y gastos de outreach comunitario del mes anterior.</p>
+                <div class="flex justify-between items-center">
+                    <div class="flex -space-x-2">
+                        <img class="w-7 h-7 rounded-full border-2 border-surface shadow-sm" alt="David" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXIlji9mbxOUS7s_Kdy9i0Jnqi9hGCrDg_Rdo1E2AhswvirsNUecEdp1dnrklu9Ib9Z0x0N2I8VAwNmj-5ErYn2kCOepoJ7Xj_jceQY-fsENK3ZTmg62Ew-6wYNk1aJCPMuF_FYLHGWx7PD3kZtalpFz3ufsEP8i7WnVc3XmMKohF5pkHAeiu9Ldqpq79YkOTLcQqsQcOnQ243zs5KrZhT7ZKHIkVcLHcd7ATz7bOkqYmGMMgLzZsRpwu8MaAMx7PsWu_gUJFPMUaB"/>
+                    </div>
+                    <span class="text-[11px] text-on-surface-variant font-medium">12 Oct</span>
+                </div>
+            </div>
+
+            <!-- Tarea Outreach -->
+            <div class="bg-surface-container border border-outline-variant rounded-xl p-5 hover:bg-surface-container-high transition-colors">
+                <div class="flex justify-between items-start mb-3">
+                    <span class="bg-surface-container-highest text-on-surface-variant text-[10px] font-bold px-2 py-0.5 rounded border border-outline-variant uppercase tracking-wider">Outreach</span>
+                    <button class="text-on-surface-variant hover:text-tertiary transition-colors active:scale-90">
+                        <span class="material-symbols-outlined text-2xl">check_circle</span>
+                    </button>
+                </div>
+                <h3 class="text-lg font-bold text-on-surface mb-1 leading-tight">Inscripción Campamento Juvenil</h3>
+                <p class="text-on-surface-variant text-sm mb-4">Revisar inscripciones entrantes y asignar grupos de transporte para el retiro.</p>
+                <div class="flex justify-between items-center">
+                    <div class="flex -space-x-2">
+                        <img class="w-7 h-7 rounded-full border-2 border-surface shadow-sm" alt="Elena" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE5tmyeB7MFegIMXq7cGzumfpAwefgVRPJXA74tFP3NjRfl0UeN3bIhdwgQt0yzkswtcDbgHMHKuisWtzJSOyS2vcrqX6A68hcidNRQO_RzsjQa5Ike0tL_ZeSScWUKiPc6kUriVnP36gS_uau_m2YGNsCNWoZYlpTz_WtgVeBKkX-0vLAKgb0c2CN0pKmkm16u9Y8LDheLVZNgGREJEfT-YgNwXdmPU_AMUvBmR7pcDC5xvYaAInluENH6iavOkboct9KWxUxNZKz"/>
+                        <img class="w-7 h-7 rounded-full border-2 border-surface shadow-sm" alt="John" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-QjFp3dWnCPIezF_j6Ld1235nc7F9fZ3RpGGlmayyMcJ_xwnEK107SrGdNNzDiAkzMLahvsr0dD_xo0hkqObjz7cVrugDhuDEloI-H71Ogho71RT0aWrfDTZ-EkzOWyi5bZR9Fl8jYtsJCgNd66g3Q4nu-lqjV4Vp2EMgj_kDaOHcSeLKytnKiZA2N10v_Nrvc7z9TIUK5WkaBWRUCYpzv9Q48-e9w5w0179dYf_NQ2BNIw3YQxqUwUbaBFIsYRdfeaED1NAR79Wk"/>
+                    </div>
+                    <span class="text-[11px] text-on-surface-variant font-medium italic">En Progreso</span>
+                </div>
+            </div>
+
+            <!-- Banner de Motivación / Criterio -->
+            <div class="p-6 bg-gradient-to-br from-primary-container/10 to-transparent border border-outline-variant rounded-xl flex flex-col items-center text-center">
+                <span class="material-symbols-outlined text-primary mb-2" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                <p class="text-on-surface text-sm italic">"Poné tu trabajo en manos del Señor, y tus planes se cumplirán."</p>
+                <p class="text-primary text-[10px] mt-2 font-bold uppercase tracking-widest">Mantené el impulso</p>
+            </div>
+
+            <!-- Tarea Facility -->
+            <div class="bg-surface-container border border-outline-variant rounded-xl p-5 hover:bg-surface-container-high transition-colors">
+                <div class="flex justify-between items-start mb-3">
+                    <span class="bg-surface-container-highest text-on-surface-variant text-[10px] font-bold px-2 py-0.5 rounded border border-outline-variant uppercase tracking-wider">Infraestructura</span>
+                    <button class="text-on-surface-variant hover:text-tertiary transition-colors active:scale-90">
+                        <span class="material-symbols-outlined text-2xl">check_circle</span>
+                    </button>
+                </div>
+                <h3 class="text-lg font-bold text-on-surface mb-1 leading-tight">Mantenimiento del Jardín</h3>
+                <p class="text-on-surface-variant text-sm mb-4">Coordinar con el equipo de voluntarios para la limpieza de otoño.</p>
+                <div class="flex justify-between items-center">
+                    <div class="flex -space-x-2">
+                        <div class="w-7 h-7 rounded-full border-2 border-surface bg-primary text-on-primary flex items-center justify-center text-[10px] font-bold">V</div>
+                    </div>
+                    <span class="text-[11px] text-on-surface-variant font-medium">15 Oct</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAB para Nueva Tarea -->
+        <button class="fixed bottom-24 right-6 w-14 h-14 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-90 transition-all z-40">
+            <span class="material-symbols-outlined text-3xl">add</span>
+        </button>
+    </main>
+
+    <!-- BottomNavBar -->
+    <nav class="bg-surface fixed bottom-0 w-full z-50 border-t border-outline-variant flex justify-around items-center h-16 pb-safe">
+        <a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors active:scale-90 duration-200" href="#">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span class="font-geist text-[10px] font-medium">Dashboard</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-primary font-bold hover:text-on-surface transition-colors active:scale-90 duration-200" href="#">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">assignment</span>
+            <span class="font-geist text-[10px]">Tareas</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors active:scale-90 duration-200" href="#">
+            <span class="material-symbols-outlined">history</span>
+            <span class="font-geist text-[10px] font-medium">Historial</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors active:scale-90 duration-200" href="#">
+            <span class="material-symbols-outlined">group</span>
+            <span class="font-geist text-[10px] font-medium">Equipo</span>
+        </a>
+    </nav>
+</body>
+</html>
